@@ -1,0 +1,82 @@
+body {
+    --background-color: #FFF;
+    --text-color: var(--accent-color);
+
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: 1s;
+}
+
+body.dark {
+    --background-color: #1F2028;
+    --text-color: var(--accent-color);
+}
+
+.button-swapper {
+    --swapper-background-color: transparent;
+    --swapper-border-color: #E6E9EE;
+    --swapper-border-on-color: #1F2028;
+    --swapper-icon-color: var(var(--swapper-border-color));
+
+    background-color: var(--swapper-background-color);
+    background-image: none;
+    border-radius: 9999px;
+    border: 2px solid;
+    cursor: pointer;
+    padding: 0.25rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-color: var(--swapper-border-color);
+    transition: border 0.1s ease;
+    outline: none;
+
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-swapper.dark {
+    --swapper-border-color: #4B4C53;
+    --swapper-border-on-color: #E6E9EE;
+    --swapper-icon-color: var(--swapper-border-on-color);
+}
+
+.button-swapper:hover {
+    border-color: var(--swapper-border-on-color);
+    outline: none;
+}
+
+.container-icon {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+}
+
+.icon-button-swapper {
+    position: absolute;
+    color: var(--swapper-icon-color);
+    transition: transform 1s ease;
+    transform-origin: 50% 100px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.icon-button-swapper.icon-sun {
+    transform: rotate(0deg);
+}
+
+.icon-button-swapper.icon-moon {
+    transform: rotate(90deg);
+}
+
+.icon-button-swapper.icon-sun.dark {
+    transform: rotate(-90deg);
+}
+
+.icon-button-swapper.icon-moon.dark {
+    transform: rotate(0);
+
+}
