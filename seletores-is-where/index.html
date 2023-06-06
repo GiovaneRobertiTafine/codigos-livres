@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="https://dev.to/dianale/simplify-css-selectors-with-is-and-where-i3o">Link example</a>
+    <header>
+        <h1>About Us</h1>
+        <h2>Meet our Team</h2>
+        <ul>
+            <li>Unordered List item one</li>
+        </ul>
+        <ol>
+            <li>Ordered List item one</li>
+        </ol>
+    </header>
+    <main>
+        <article>
+            <h3>Web Designer</h3>
+            <p>This is our web designer.</p>
+            <a href="#">View Bio</a>
+        </article>
+        <article class="card">
+            <h3 id="heading">Web Developer</h3>
+            <p>This is our web developer.</p>
+            <a href="#">View Bio</a>
+        </article>
+    </main>
+    <footer>
+        <ul>
+            <li>Unordered List item one</li>
+        </ul>
+        <ol>
+            <li>Ordered List item one</li>
+        </ol>
+    </footer>
+</body>
+<style>
+    /* ------------------------------------- */
+    /* 
+    h3,
+    p,
+    a {
+        color: blue;
+    } 
+    */
+
+    /* 
+    :where(h3, p, a) {
+        color: red;
+    } */
+
+    /* ------------------------------------- */
+    /* 
+    .card h3,
+    .card p,
+    .card a {
+        color: blue;
+    } 
+    */
+
+    /* 
+    .card :is(h3, p, a) {
+        color: red;
+    } 
+    */
+
+    /* ------------------------------------- */
+    /* 
+    header ul,
+    header ol,
+    footer ul,
+    footer ol {
+        color: green;
+    } 
+    */
+
+    /* 
+    :where(header, footer) :where(ul, ol) {
+        color: yellow;
+    } 
+    */
+
+    /* ------------------------------------- */
+    .card :where(h3, p, :second-child) {
+        color: blue;
+        font-family: sans-serif;
+    }
+</style>
+
+</html>

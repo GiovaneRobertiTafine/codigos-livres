@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="https://dev.to/dianale/css-typography-create-exact-heights-with-line-clamp-40e3#flex-grow">Link example</a>
+    <section>
+        <article>
+            <h3>Title of Card</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit dis egestas, sem neque integer potenti venenatis
+                vulputate varius donec. Volutpat mus eget suspendisse sollicitudin urna blandit in bibendum dui, class
+                porta rutrum dictum facilisi facilisis mollis natoque elementum, sapien sed quisque adipiscing fames
+                cras est augue. Luctus class rhoncus consequat etiam inceptos volutpat himenaeos quisque aptent per,
+                parturient habitant faucibus aliquet hac torquent tempus cursus senectus, elementum vulputate magna
+                taciti hendrerit erat sodales dapibus blandit.
+
+                Lorem ipsum dolor sit amet consectetur adipiscing elit dis egestas, sem neque integer potenti venenatis
+                vulputate varius donec. Volutpat mus eget suspendisse sollicitudin urna blandit in bibendum dui, class
+                porta rutrum dictum facilisi facilisis mollis natoque elementum, sapien sed quisque adipiscing fames
+                cras est augue. Luctus class rhoncus consequat etiam inceptos volutpat himenaeos quisque aptent per,
+                parturient habitant faucibus aliquet hac torquent tempus cursus senectus, elementum vulputate magna
+                taciti hendrerit erat sodales dapibus blandit.</p>
+            <a href="#">Learn More</a>
+            <img src="https://picsum.photos/300/100" alt="">
+        </article>
+        <article>
+            <h3>Title of Card</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit dis egestas, sem neque integer potenti venenatis
+                vulputate varius donec. Volutpat mus eget suspendisse sollicitudin urna blandit in bibendum dui, class
+                porta rutrum dictum facilisi facilisis mollis natoque elementum, sapien sed quisque adipiscing fames
+                cras est augue.</p>
+            <a href="#">Learn More</a>
+            <img src="https://picsum.photos/300/100" alt="">
+        </article>
+        <article>
+            <h3>Title of Card</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit dis egestas, sem neque integer potenti venenatis
+                vulputate varius donec. Volutpat mus eget suspendisse sollicitudin urna blandit in bibendum dui, class
+                porta rutrum dictum facilisi facilisis mollis natoque elementum, sapien sed quisque adipiscing fames
+                cras est augue. Luctus class rhoncus consequat etiam inceptos volutpat himenaeos quisque aptent per,
+                parturient habitant faucibus aliquet hac torquent tempus cursus senectus, elementum vulputate magna
+                taciti hendrerit erat sodales dapibus blandit.</p>
+            <a href="#">Learn More</a>
+            <img src="https://picsum.photos/300/100" alt="">
+        </article>
+        <article>
+            <h3>Title of Card</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit dis egestas, sem neque integer potenti venenatis
+                vulputate varius donec. Volutpat mus eget suspendisse sollicitudin urna blandit in bibendum dui, class
+                porta rutrum dictum facilisi facilisis mollis natoque elementum, sapien sed quisque adipiscing fames
+                cras est augue. Luctus class rhoncus consequat etiam inceptos volutpat himenaeos quisque aptent per,
+                parturient habitant faucibus aliquet hac torquent tempus cursus senectus, elementum vulputate magna
+                taciti hendrerit erat sodales dapibus blandit.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit incidunt distinctio, sequi quam beatae
+                cupiditate aliquid voluptas voluptatem itaque, inventore quae debitis sapiente asperiores qui veniam
+                eaque eos nostrum ipsam?
+                Libero officiis, possimus minima excepturi tempora veritatis explicabo, dolorem sapiente aliquid
+                molestias sunt earum! Tempora, non. Pariatur tempora blanditiis, placeat vel aut odit vero, debitis
+                labore id accusamus, laudantium soluta.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit fuga officia nobis aliquam recusandae
+                veritatis quam, non enim quas in. Alias magni ipsa expedita consequatur adipisci quibusdam dolore quo?
+                Inventore?
+            </p>
+            <a href="#">Learn More</a>
+            <img src="https://picsum.photos/300/100" alt="">
+        </article>
+
+    </section>
+</body>
+<style>
+    section {
+        display: flex;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    p {
+        flex: 1 1 auto;
+        /* could also use flex-grow: 1 */
+    }
+
+    /* p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        /* Adjust the number of lines here 
+        overflow: hidden;
+    } */
+</style>
+
+</html>
