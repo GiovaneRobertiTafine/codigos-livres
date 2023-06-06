@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="https://dev.to/dianale/css-selectors-style-lists-with-the-marker-pseudo-element-ee4">Link example</a>
+    <h1>Styling Lists</h1>
+    <div class="lists">
+        <div>
+            <h2>Using pseudo-elements:</h2>
+            <ul class="list-pseudo list">
+                <li class="list__apples">Apples</li>
+                <li class="list__bananas">Bananas</li>
+                <li class="list__avocados">Avocados</li>
+                <li class="list__cheese">Cheese</li>
+                <li class="list__bread">Bread</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Using list-style:</h2>
+            <ul class="list-image list">
+                <li class="list__apples">Apples</li>
+                <li class="list__bananas">Bananas</li>
+                <li class="list__avocados">Avocados</li>
+                <li class="list__cheese">Cheese</li>
+                <li class="list__bread">Bread</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Using ::marker:</h2>
+            <ul class="list-marker-bullet list">
+                <li class="list__apples">Apples</li>
+                <li class="list__bananas">Bananas</li>
+                <li class="list__avocados">Avocados</li>
+                <li class="list__cheese">Cheese</li>
+                <li class="list__bread">Bread</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Using ::marker & emojis:</h2>
+            <ul class="list-marker-emoji list">
+                <li class="list__apples">Apples</li>
+                <li class="list__bananas">Bananas</li>
+                <li class="list__avocados">Avocados</li>
+                <li class="list__cheese">Cheese</li>
+                <li class="list__bread">Bread</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<style>
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Inter", sans-serif;
+        width: 100%;
+        max-width: 500px;
+        margin: 1rem auto;
+        color: #191716;
+    }
+
+    .blog {
+        display: block;
+        margin: 0.5rem auto;
+        text-align: center;
+    }
+
+    h1 {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    /* Default list styling */
+
+    .lists {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        font-size: 1.125rem;
+        line-height: 1.5;
+    }
+
+    .lists>div {
+        padding: 1rem 0.5rem;
+        border: 1px solid #191716;
+    }
+
+    .list {
+        padding-left: 1.5rem;
+    }
+
+    /* Old Method - Change bullet colors using pseudo-element */
+    .list-pseudo li {
+        display: flex;
+        align-items: center;
+        gap: 0 0.25rem;
+    }
+
+    .list-pseudo li::before {
+        content: "\2022";
+        color: #ec368d;
+    }
+
+    /* Change list marker from bullet to image */
+
+    .list-image {
+        list-style: "\1F6D2";
+    }
+
+    /* New method: ::marker */
+
+    .list-marker-bullet {
+        list-style: disc;
+    }
+
+    .list-marker-bullet li::marker {
+        color: #ec368d;
+    }
+
+    /* Emoji marker */
+
+    .list-marker-emoji .list__apples::marker {
+        content: "🍎";
+    }
+
+    .list-marker-emoji .list__bananas::marker {
+        content: "🍌";
+    }
+
+    .list-marker-emoji .list__avocados::marker {
+        content: "🥑";
+    }
+
+    .list-marker-emoji .list__cheese::marker {
+        content: "🧀";
+    }
+
+    .list-marker-emoji .list__bread::marker {
+        content: "🥖";
+    }
+</style>
+
+</html>
